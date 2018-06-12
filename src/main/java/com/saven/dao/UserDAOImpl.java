@@ -58,7 +58,7 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public List<GapsIndex> getLatestGaps() {
 		String date = new SimpleDateFormat("yyyyMMdd").format(new Date());
-		String tableName = date+"_tfp_gaps_index";
+		String tableName = "20180507_tfp_gaps_index";
 		String sql = "select minute, flavor, feed, recv, miss, fill from "
 				+ tableName +" order by minute desc limit 10";
         //RowMapper<Article> rowMapper = new BeanPropertyRowMapper<Article>(Article.class);
